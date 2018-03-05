@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestLOCours1
 {
     [TestClass]
-    public class UnitTest1
+    public class FractionTest
     {
 
         [TestMethod]

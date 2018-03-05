@@ -6,6 +6,15 @@ namespace LangageObjCours1
     {
         static void Main(string[] args)
         {
+
+            int[,] matrice = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+            int[,] matriceTest = new int[,] { { 2, 4, 6 }, { 8, 10, 12 }, { 14, 16, 18 } };
+
+            Matrice m1 = new Matrice(matrice);
+            Matrice m2 = new Matrice(matrice);
+
+            Matrice mTest = m1 * m2;
+
             Fraction f = null;
 
             while(f == null) {
