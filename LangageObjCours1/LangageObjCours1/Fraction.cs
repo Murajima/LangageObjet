@@ -101,5 +101,10 @@ namespace LangageObjCours1
         {
             return a * new Fraction(b.Denominator, b.Numerator);
         }
+
+        public override string ToString()
+        {
+            return Numerator.ToString() + "/" + Denominator.ToString();
+        }
     }
 }
