@@ -9,6 +9,9 @@ namespace LangageObjCours1
 
         public Fraction(int x, int y)
         {
+            if (y == 0) {
+                throw new FractionInitException("Incorrect denominator");
+            }
             this.Numerator = x;
             this.Denominator = y;
         }
@@ -16,8 +19,17 @@ namespace LangageObjCours1
         public Fraction(string s)
         {
             string[] pieces = s.Split('/');
-            this.Numerator = int.Parse(pieces[0]);
-            this.Denominator = int.Parse(pieces[1]);
+            if (pieces.Length != 2) {
+                throw new FractionInitException("Incorrect String");
+            }
+            else if (int.Parse(pieces[1]) == 0)
+            {
+                throw new FractionInitException("Incorrect denominator");
+            } else {
+                this.Numerator = int.Parse(pieces[0]);
+                this.Denominator = int.Parse(pieces[1]);
+            }
+
         }
 
         // Return PGCD

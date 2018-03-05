@@ -6,7 +6,7 @@ namespace LangageObjCours1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Fraction f = new Fraction("nfaosnflnsflknkl");
         }
     }
 }

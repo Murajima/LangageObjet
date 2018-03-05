@@ -1,3 +1,4 @@
+using System;
 using LangageObjCours1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -6,7 +7,44 @@ namespace TestLOCours1
     [TestClass]
     public class UnitTest1
     {
-        
+
+        [TestMethod]
+        public void TestFractionWithDenominator0 () {
+            try {
+                Fraction f = new Fraction(1, 0);
+                Assert.Fail();
+            } catch (Exception ex){
+                Assert.IsInstanceOfType(ex, typeof(FractionInitException));
+            }
+        }
+
+        [TestMethod]
+        public void TestFractionWithDenominator0String()
+        {
+            try
+            {
+                Fraction f = new Fraction("1/0");
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(FractionInitException));
+            }
+        }
+
+        [TestMethod]
+        public void BadStringInitializer() {
+            try
+            {
+                Fraction f = new Fraction("BKDJBFKJWBFK");
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+                Assert.IsInstanceOfType(ex, typeof(FractionInitException));
+            }
+        }
+
         [TestMethod]
         public void Simplifier()
         {
