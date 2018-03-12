@@ -1,0 +1,3 @@
+[submodule "mathCsharp"]
+	path = mathCsharp
+	url = https://github.com/vincentdelvalle-ynov/mathCsharp.git
