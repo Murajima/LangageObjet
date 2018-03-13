@@ -1,14 +1,39 @@
 ﻿using System;
 using LangageObjCours1.Exceptions;
+using System.Text.RegularExpressions;
 
 namespace LangageObjCours1
 {
     public class Matrice
     {
         public int[,] matrice;
+        // { { 2, 4, 6 }, { 8, 10, 12 }, { 14, 16, 18 } }
+        public const string MATRICE_PATTERN = @"([0-9]+)(,?)+";
+
         public Matrice(int [,] matrice)
         {
             this.matrice = matrice;
+        }
+
+        public Matrice(int tailleI, int tailleJ) {
+            matrice = new int[tailleI, tailleJ];
+        }
+
+        public Matrice(string input) {
+            Regex r = new Regex(MATRICE_PATTERN);
+            Match m = r.Match(input);
+            if (m.Success)
+            {
+                for (int i = 0; i < m.Groups.Count; i++) {
+                    
+                }
+                
+            }
+            else
+            {
+                throw new MatriceException("Format de matrice invalide.");
+            }
+            
         }
 
         public static Matrice operator +(Matrice a, Matrice b)
