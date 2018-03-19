@@ -18,16 +18,30 @@ namespace LangageObjCours1
             }
 
             // Depart
+
+            //Initialisation des valeurs
             int nbPassageTot = (n / 2);
             int nbPassage = 0;
             int nbDeplacement = 1;
             int depart = (n / 2);
-            int cpt = 3;
+            int cpt = 3; // Placement des deux premières valeurs à la main
+
+            // On met à jour ces valeurs comme la case de depart de chaque itération d'un cycle => facilite l'écriture du code
             int i = depart;
             int j = depart + 1;
+
+            // Le cycle commence à zéro
             int cycle = 0;
+
+            // On place la valeure 1 au milieu de la matrice de taille n
             spirale.matrice[i, i] = 1;
+
+            // On initialise la case de départ du 1er cycle
             spirale.matrice[i, j] = 2;
+
+
+            // Tant que le nombre de passage max n'est pas effectué, on continue de remplir le tableau en spirale, 
+            // selon un cycle prédéfini en 4 étapes
             while(nbPassage < nbPassageTot) {
                 if (cycle == 0){
                     int tmpI = 0;
@@ -83,8 +97,10 @@ namespace LangageObjCours1
 
         }
 
+        // Récupère la distance entre le nombre donné en paramètre et le centre de la matrice. 
+        // Retourne -1 si le nombre n'existe pas dans la matrice.
         public int getDistance(int nb){
-            int distance = 0;
+            int distance = -1;
             int depart = taille / 2;
             for (int i = 0; i < taille; i++){
                 for (int j = 0; j < taille; j++){

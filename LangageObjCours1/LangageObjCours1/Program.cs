@@ -10,7 +10,7 @@ namespace LangageObjCours1
         static void Main(string[] args)
         {
             int dist;
-            Spirale sp = new Spirale(3);
+            Spirale sp = new Spirale(5);
             dist = sp.getDistance(8);
 
         }
