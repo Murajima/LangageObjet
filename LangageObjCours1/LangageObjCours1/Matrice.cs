@@ -15,6 +15,11 @@ namespace LangageObjCours1
             this.matrice = matrice;
         }
 
+        public Matrice(int n)
+        {
+            this.matrice = new int[n, n];
+        }
+
         public Matrice(int tailleI, int tailleJ) {
             matrice = new int[tailleI, tailleJ];
         }

@@ -9,8 +9,9 @@ namespace LangageObjCours1
     {
         static void Main(string[] args)
         {
-
-            JeuDeLaVie();
+            int dist;
+            Spirale sp = new Spirale(3);
+            dist = sp.getDistance(8);
 
         }
 
