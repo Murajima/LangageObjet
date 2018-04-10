@@ -94,7 +94,6 @@ namespace LangageObjCours1
                     }
                 }
             }
-
         }
 
         // Récupère la distance entre le nombre donné en paramètre et le centre de la matrice. 
